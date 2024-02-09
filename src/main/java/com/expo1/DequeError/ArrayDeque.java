@@ -6,6 +6,14 @@ public class ArrayDeque<T> implements DequeADT<T> {
     private int front, rear, count;
     private T[] deque;
 
+    public T getFirst() {
+        return deque[front];
+    }
+    public T getLast() {
+        return deque[rear-1];
+    }
+
+
     //creates an empty deque using default capacity
     public ArrayDeque() {
         front = rear = count = 0;
@@ -94,8 +102,13 @@ public class ArrayDeque<T> implements DequeADT<T> {
     public T last() throws EmptyCollectionException {
         if (isEmpty())
             throw new EmptyCollectionException("queue");
-        T result = deque[rear -1];
-        return result;
+        try {
+            T result = deque[rear -1];
+            return result;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            T result = deque[deque.length -1];
+            return result;
+        }
     }
 
     //returns true if deque is empty
