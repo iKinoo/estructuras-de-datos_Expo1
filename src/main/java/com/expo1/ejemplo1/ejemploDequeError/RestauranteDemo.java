@@ -1,8 +1,7 @@
-package com.expo1.DequeError.ejemploDequeError;
+package com.expo1.ejemplo1.ejemploDequeError;
 
-import com.expo1.DequeError.ArrayDeque;
-
-import com.expo1.DequeError.EmptyCollectionException;
+import com.expo1.ejemplo1.ArrayDeque;
+import com.expo1.ejemplo1.EmptyCollectionException;
 
 public class RestauranteDemo {
     public static void main(String[] args) throws EmptyCollectionException {

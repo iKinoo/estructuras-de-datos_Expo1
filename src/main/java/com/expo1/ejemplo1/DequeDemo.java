@@ -1,4 +1,4 @@
-package com.expo1.DequeError;
+package com.expo1.ejemplo1;
 
 // import ArrayDeque;
 

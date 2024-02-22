@@ -1,4 +1,4 @@
-package com.expo1.DequeError;
+package com.expo1.ejemplo2;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -10,6 +10,7 @@ public class Deque<Item> implements Iterable<Item> {
     private Node<Item> first;
     private Node<Item> last;
 
+    @SuppressWarnings("hiding")
     private class Node<Item> {
         Item item;
         Node<Item> next;
@@ -37,7 +38,7 @@ public class Deque<Item> implements Iterable<Item> {
         return size;
     } // return the number of items on the deque
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     // add the item to the front
     public void addFirst(Item item) {
         if (item == null) {
@@ -54,7 +55,7 @@ public class Deque<Item> implements Iterable<Item> {
         size++;
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     // add the item to the end
     public void addLast(Item item) {
         if (item == null) {
@@ -110,11 +111,14 @@ public class Deque<Item> implements Iterable<Item> {
 
     // return an iterator over items in order from front to end
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     public Iterator<Item> iterator() {
         return new DequeIterator();
     }
 
+    @SuppressWarnings("hiding")
     private class DequeIterator<Item> implements Iterator<Item> {
+        @SuppressWarnings("rawtypes")
         private Node current;
 
         public DequeIterator() {
@@ -132,6 +136,7 @@ public class Deque<Item> implements Iterable<Item> {
         public Item next() {
             if (!hasNext())
                 throw new NoSuchElementException();
+            @SuppressWarnings("unchecked")
             Item item = (Item) current.item;
             current = current.next;
             return item;

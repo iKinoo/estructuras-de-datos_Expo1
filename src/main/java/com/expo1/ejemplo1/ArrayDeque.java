@@ -1,4 +1,4 @@
-package com.expo1.DequeError;
+package com.expo1.ejemplo1;
 
 public class ArrayDeque<T> implements DequeADT<T> {
 
@@ -15,12 +15,14 @@ public class ArrayDeque<T> implements DequeADT<T> {
 
 
     //creates an empty deque using default capacity
+    @SuppressWarnings("unchecked")
     public ArrayDeque() {
         front = rear = count = 0;
         deque = (T[]) (new Object[DEFAULT_CAPACITY]);
     }
 
     //creates an empty deque using specified capacity
+    @SuppressWarnings("unchecked")
     public ArrayDeque (int initialCapacity) {
         front = rear = count = 0;
         deque = (T[])(new Object[initialCapacity]);

@@ -1,4 +1,4 @@
-package com.expo1.DequeError;
+package com.expo1.ejemplo1;
 
 public interface DequeADT<T> {
 // no la presenta en el código original
