@@ -1,31 +1,35 @@
 package com.expo1.ejemplo1;
 
-// import ArrayDeque;
+// import java.util.ArrayDeque;
 
 public class DequeDemo {
+
     public static void main(String[] args) throws EmptyCollectionException {
-        // create an object for the Deque class
+        //create an object for the Deque class
         ArrayDeque<Integer> cad = new ArrayDeque<Integer>();
 
-        /* Adding integers to the deque at rear */
-        cad.enqueueRear(40);
+        /*Adding integers to the deque at rear*/
         cad.enqueueRear(17);
-        cad.enqueueRear(-1);
-        // cad.dequeueRear();
-        cad.enqueueFront(-4);
-        cad.enqueueFront(10);
+        cad.enqueueRear(25);
+        cad.enqueueRear(99);
+        cad.enqueueFront(40);
+        cad.enqueueFront(39);
         cad.enqueueFront(20);
-        cad.enqueueFront(60);
-        cad.enqueueFront(90);
-        cad.enqueueFront(23);
-        cad.enqueueFront(5);
-        cad.enqueueFront(7);
-
-        cad.dequeueFront();
-        cad.dequeueRear();
+        // System.out.println(cad);
+        // System.out.println("----");
+        // cad.dequeueRear();
+        // System.out.println(cad);
+        // System.out.println("----");
+        // cad.enqueueFront(-4);
+        // System.out.println(cad);
+        // System.out.println("----");
         // cad.dequeueFront();
-
+        System.out.println(cad);
+        System.out.println("----");
+        
+        
         System.out.println(cad.first());
         System.out.println(cad.last());
     }
+
 }
